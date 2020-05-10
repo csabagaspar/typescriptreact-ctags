@@ -1,0 +1,4 @@
+--langdef=typescript
+--langmap=typescript:.ts.tsx
+--regex-typescript=/^[ \t]*(export[ \t]+)?(var|let|const)[ \t]+([a-z0-9_$]+[a-zA-Z0-9_$]*)+(:[ \t][a-zA-Z0-9_$]+[ \t])*[ \t]*=[ \t]*(\()/\3/a,arrow-functions/
+--regex-typescript=/^[ \t]*(export[ \t]+)?(var|let|const)[ \t]+([A-Z0-9_$]+[a-zA-Z0-9_$]*)+(:[ \t][a-zA-Z0-9_$]+[ \t])*[ \t]*=[ \t]*(\()/\3/C,Components/
