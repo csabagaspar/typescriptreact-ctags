@@ -1,6 +1,7 @@
 --langdef=typescript
 --langmap=typescript:.ts.tsx
 --regex-typescript=/^[ \t]*(export[ \t]+)?(var|let|const)[ \t]+([a-z0-9_$]+[a-zA-Z0-9_$]*)+(:[ \t][a-zA-Z0-9_$]+[ \t])*[ \t]*=[ \t]*(\()/\3/a,=>/
+--regex-typescript=/^[ \t]*(var|let|const)+[ \t]+\[+([a-z0-9_$]+[a-zA-Z0-9_$]*)+,+[ \t]+([a-z0-9_$]+[a-zA-Z0-9_$]*)+\]+[ \t]+=[ \t]+(React.)*(useState)+/\2/S,useState/
 --regex-typescript=/^[ \t]*(export[ \t]+)?(var|let|const)[ \t]+([A-Z0-9_$]+[a-zA-Z0-9_$]*)+(:[ \t][a-zA-Z0-9_$]+[ \t])*[ \t]*=[ \t]*(\()/\3/F,FunctionalComponents/
 --regex-typescript=/^[ \t]*(export[ \t]+)?(var|let|const)[ \t]+([A-Z0-9_$]+[a-zA-Z0-9_$]*)+(:[ \t]React.FC<)+/\3/F,FunctionalComponents/
 --regex-typescript=/^[ \t]*(export[ \t])?(default[\ t])?class[ \t]([A-Z0-9_$]+[a-zA-Z0-9_$]*)[ \t]extends[ \t](React.Component|Component|React.PureComponent|PureComponent)/\3/C,ClassComponents/
